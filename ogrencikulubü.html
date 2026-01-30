@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Öğrenci Kulübü</title>
+    
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #071597;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        footer {
+            background: #af0000;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<script>
+
+    function donateClub() {
+        alert("💙 Thank you for supporting Chelsea!");
+    }
+
+    function formKontrol() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+
+        if (name === "" || email === "") {
+            alert("Lütfen tüm alanları doldurun");
+            return false;
+        }
+
+        alert("Form gönderildi!");
+        return true;
+    }
+</script>
+</body>
+</html>
+
+<body>   
+    <br>
+<header>
+    <h1>Chelsea F.C.</h1>
+    <nav>
+        <a href="#about">Information</a>
+        <a href="#activities">Match Fixtures</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+<br>
+   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Chelsea_campe%C3%A3o_da_FA_Cup_2017-18.jpg"
+    alt="Logo"
+    width="1000">
+    <br>
+<section id="hero">
+    <h2>We are preparing young prospects for the future</h2>
+    <p>Only policy for Chelsea is to build up its youth club</p>
+</section>
+
+<section>
+    <button class="flame-btn" onclick="donateClub()">🔥 Donate to Chelsea</button>
+
+</section>
+
+<section id="about">
+    <h2>Information</h2>
+    <p>
+        Address: Stamford Bridge, Fulham Road, London SW6 1HS <br>
+        Club nickname: The Blues <br>
+        Formed: 1905 <br>
+        Stadium capacity: 40,044
+    </p>
+</section>
+
+<section id="activities">
+    <h2>Match Fixtures</h2>
+    <br>
+    <img 
+  src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg"
+  alt=" Logo"
+  width="200">
+<br>
+    <p>
+        Chelsea 2 - 1 Liverpool <br>
+        Chelsea 3 - 0 Wolves <br>
+        Chelsea 1 - 1 Arsenal <br>
+        
+    </p>
+    <br>
+</section>
+
+<section id="contact">
+    <h2>Contact List</h2>
+
+    <form onsubmit="return formKontrol()">
+        <input type="text" id="name" placeholder="Name"><br><br>
+        <input type="email" id="email" placeholder="Email"><br><br>
+        <textarea id="msg" placeholder="Your Message"></textarea><br><br>
+        <button type="submit">Send</button>
+    </form>
+
+    <p>
+        General Enquiries: +44 20 7386 9373
+    </p>
+</section>
+
+<footer>
+    <p>All rights reserved © Sir Alperen</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
