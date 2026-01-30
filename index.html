@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Öğrenci Kulübü</title>
+    <title>Chelsea F.C.</title>
 
     <style>
         * {
@@ -19,7 +19,7 @@
         header {
             background: #071597;
             color: white;
-            padding: 15px;
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -27,40 +27,55 @@
 
         nav a {
             color: white;
-            margin-left: 15px;
+            margin-left: 20px;
             text-decoration: none;
+            font-weight: bold;
         }
 
         section {
-            padding: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .media {
+            margin: 30px 0;
+            text-align: center;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 16px;
+            cursor: pointer;
         }
 
         footer {
             background: #af0000;
-            text-align: center;
-            padding: 10px;
             color: white;
+            text-align: center;
+            padding: 15px;
         }
     </style>
 </head>
 
 <body>
 
-    <h2>Chelsea Highlights</h2>
+    <!-- HIGHLIGHTS -->
+    <section>
+        <h2>Chelsea Highlights</h2>
 
-    <img src="chelsea.gif" width="300">
+        <div class="media">
+            <img src="chelsea.gif" alt="Chelsea GIF" width="300">
+        </div>
 
-    <br><br>
+        <div class="media">
+            <video width="500" controls>
+                <source src="video.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+        </div>
+    </section>
 
-    <video width="400" controls>
-        <source src="video.mp4" type="video/mp4">
-    </video>
-
+    <!-- HEADER -->
     <header>
         <h1>Chelsea F.C.</h1>
         <nav>
@@ -70,18 +85,26 @@
         </nav>
     </header>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Chelsea_campe%C3%A3o_da_FA_Cup_2017-18.jpg"
-         width="1000">
+    <!-- HERO IMAGE -->
+    <section>
+        <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Chelsea_campe%C3%A3o_da_FA_Cup_2017-18.jpg"
+            width="900"
+        >
+    </section>
 
-    <section id="hero">
+    <!-- HERO TEXT -->
+    <section>
         <h2>We are preparing young prospects for the future</h2>
         <p>Only policy for Chelsea is to build up its youth club</p>
     </section>
 
+    <!-- BUTTON -->
     <section>
         <button onclick="donateClub()">🔥 Donate to Chelsea</button>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
         <h2>Information</h2>
         <p>
@@ -92,9 +115,13 @@
         </p>
     </section>
 
+    <!-- MATCH FIXTURES -->
     <section id="activities">
         <h2>Match Fixtures</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg" width="200">
+        <img 
+            src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg"
+            width="180"
+        >
         <p>
             Chelsea 2 - 1 Liverpool <br>
             Chelsea 3 - 0 Wolves <br>
@@ -102,6 +129,7 @@
         </p>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
         <h2>Contact List</h2>
 
@@ -111,12 +139,16 @@
             <textarea id="msg" placeholder="Your Message"></textarea><br><br>
             <button type="submit">Send</button>
         </form>
+
+        <p>General Enquiries: +44 20 7386 9373</p>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p>All rights reserved © Sir HugoVenezia</p>
+        <p>All rights reserved © Sir Alperen</p>
     </footer>
 
+    <!-- JAVASCRIPT -->
     <script>
         function donateClub() {
             alert("💙 Thank you for supporting Chelsea!");
