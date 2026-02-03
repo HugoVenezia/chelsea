@@ -25,36 +25,74 @@ header{
   position:fixed;
   top:0;
   width:100%;
-  height:70px;               /* 🔴 HEADER YÜKSEKLİĞİ */
+  height:70px;
   background:#111;
   color:white;
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:15px 20px;
-  z-index:1000;
+  z-index:9999; /* 🔴 HER ŞEYİN ÜSTÜNDE */
 }
 
 nav a{
   color:white;
   margin-left:20px;
   text-decoration:none;
+  white-space:nowrap;
+}
+
+/* DROPDOWN */
+.dropdown{
+  position:relative;
+  display:inline-block;
+}
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  top:38px;
+  left:0;
+  background:#1c1c1c;
+  min-width:340px;
+  border-radius:6px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.45);
+  z-index:10000; /* 🔴 TIKLANABİLİR */
+}
+
+.dropdown-content a{
+  display:block;
+  padding:10px 14px;
+  font-size:13px;
+  color:#eee;
+  text-decoration:none;
+  pointer-events:auto;
+}
+
+.dropdown-content a:hover{
+  background:#d4af37;
+  color:#111;
+}
+
+.dropdown:hover .dropdown-content{
+  display:block;
 }
 
 /* HERO */
 .hero{
-  height:100vh;              /* 🔴 TAM EKRAN */
+  height:100vh;
   position:relative;
   overflow:hidden;
+  pointer-events:none; /* 🔴 HERO TIKLAMAYI ENGELLEMEZ */
 }
 
 .hero video{
   position:absolute;
   top:0;
   left:0;
-  width:100vw;               /* 🔴 TÜM GENİŞLİK */
-  height:100vh;              /* 🔴 TÜM YÜKSEKLİK */
-  object-fit:cover;          /* 🔴 KAPLAMA */
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
 }
 
 .hero::after{
@@ -63,7 +101,6 @@ nav a{
   inset:0;
   background:rgba(0,0,0,0.55);
   z-index:1;
-  pointer-events:none;
 }
 
 .hero-content{
@@ -74,6 +111,12 @@ nav a{
   color:white;
   text-align:center;
   z-index:2;
+}
+
+/* HERO içerik tıklanabilir kalsın */
+.hero-content,
+.hero-content *{
+  pointer-events:auto;
 }
 
 .hero-content h1{
@@ -117,41 +160,6 @@ footer{
   text-align:center;
   padding:20px;
 }
-
-/* DROPDOWN */
-.dropdown{
-  position:relative;
-  display:inline-block;
-}
-
-.dropdown-content{
-  display:none;
-  position:absolute;
-  top:38px;
-  left:0;
-  background:#1c1c1c;
-  min-width:340px;
-  border-radius:6px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.45);
-  z-index:2000;
-}
-
-.dropdown-content a{
-  display:block;
-  padding:10px 14px;
-  font-size:13px;
-  color:#eee;
-  text-decoration:none;
-}
-
-.dropdown-content a:hover{
-  background:#d4af37;
-  color:#111;
-}
-
-.dropdown:hover .dropdown-content{
-  display:block;
-}
 </style>
 </head>
 
@@ -187,7 +195,7 @@ footer{
 </section>
 
 <section id="gallery">
-  <h2>Daily Historic Football Moments</h2>
+  <h2>Daily Historic Football</h2>
   <div class="gallery-grid">
     <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/GettyImages-503368718.jpg.webp">
     <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/roberto-baggio-after-missing-the-deciding-penalty-in-the-v0-qsfv504qujyd1.webp">
