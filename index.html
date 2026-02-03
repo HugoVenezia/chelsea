@@ -191,6 +191,56 @@ section h2{
   transform:scale(1.05);
 }
 
+/* CONTACT */
+#contact{
+  background:#0f2027;
+  color:white;
+}
+
+.contact-box{
+  max-width:600px;
+  margin:0 auto;
+  background:rgba(255,255,255,0.05);
+  padding:40px;
+  border-radius:15px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.contact-box h2{
+  margin-bottom:25px;
+}
+
+.contact-box input,
+.contact-box textarea{
+  width:100%;
+  padding:12px 15px;
+  margin-bottom:15px;
+  border:none;
+  border-radius:8px;
+  font-size:14px;
+  outline:none;
+}
+
+.contact-box textarea{
+  resize:none;
+  height:120px;
+}
+
+.contact-box button{
+  padding:14px 30px;
+  background:#d4af37;
+  border:none;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.contact-box button:hover{
+  background:#b8962e;
+  transform:translateY(-2px);
+}
+
 /* FOOTER */
 footer{
   background:#111;
@@ -234,11 +284,24 @@ footer{
 </section>
 
 <section id="gallery">
-  <h2>Daily Historic Football</h2>
+  <h2>Daily Historic Football Moments</h2>
   <div class="gallery-grid">
     <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/GettyImages-503368718.jpg.webp">
     <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/roberto-baggio-after-missing-the-deciding-penalty-in-the-v0-qsfv504qujyd1.webp">
     <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/diego-armando-maradona-logro-dos-goles-ante-inglaterra--uno-de-ellos-el-de-la-conocida--mano-de-dios---archivo.jpg">
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-box">
+    <h2>İletişim</h2>
+
+    <form action="mailto:EMAILINI_BURAYA_YAZ@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="isim" placeholder="Adınız" required>
+      <input type="email" name="email" placeholder="E-mail adresiniz" required>
+      <textarea name="mesaj" placeholder="Mesajınız" required></textarea>
+      <button type="submit">Mesaj Gönder</button>
+    </form>
   </div>
 </section>
 
