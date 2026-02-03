@@ -31,13 +31,23 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 20px;
-  z-index:9999; /* 🔴 HER ŞEYİN ÜSTÜNDE */
+  padding:0 20px;
+  z-index:9999;
+}
+
+.logo{
+  font-weight:600;
+}
+
+/* NAV – 🔴 FLEX ŞART */
+nav{
+  display:flex;
+  align-items:center;
+  gap:20px;            /* margin-left yerine */
 }
 
 nav a{
   color:white;
-  margin-left:20px;
   text-decoration:none;
   white-space:nowrap;
 }
@@ -45,19 +55,18 @@ nav a{
 /* DROPDOWN */
 .dropdown{
   position:relative;
-  display:inline-block;
 }
 
 .dropdown-content{
   display:none;
   position:absolute;
-  top:38px;
+  top:100%;
   left:0;
   background:#1c1c1c;
   min-width:340px;
   border-radius:6px;
   box-shadow:0 10px 25px rgba(0,0,0,0.45);
-  z-index:10000; /* 🔴 TIKLANABİLİR */
+  z-index:10000;
 }
 
 .dropdown-content a{
@@ -66,7 +75,6 @@ nav a{
   font-size:13px;
   color:#eee;
   text-decoration:none;
-  pointer-events:auto;
 }
 
 .dropdown-content a:hover{
@@ -74,6 +82,7 @@ nav a{
   color:#111;
 }
 
+/* 🔴 HOVER GERÇEKTEN ÇALIŞIR */
 .dropdown:hover .dropdown-content{
   display:block;
 }
@@ -83,15 +92,14 @@ nav a{
   height:100vh;
   position:relative;
   overflow:hidden;
-  pointer-events:none; /* 🔴 HERO TIKLAMAYI ENGELLEMEZ */
+  pointer-events:none;
 }
 
 .hero video{
   position:absolute;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
+  inset:0;
+  width:100%;
+  height:100%;
   object-fit:cover;
 }
 
@@ -100,7 +108,6 @@ nav a{
   position:absolute;
   inset:0;
   background:rgba(0,0,0,0.55);
-  z-index:1;
 }
 
 .hero-content{
@@ -110,12 +117,6 @@ nav a{
   transform:translate(-50%,-50%);
   color:white;
   text-align:center;
-  z-index:2;
-}
-
-/* HERO içerik tıklanabilir kalsın */
-.hero-content,
-.hero-content *{
   pointer-events:auto;
 }
 
@@ -199,11 +200,4 @@ footer{
   <div class="gallery-grid">
     <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/GettyImages-503368718.jpg.webp">
     <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/roberto-baggio-after-missing-the-deciding-penalty-in-the-v0-qsfv504qujyd1.webp">
-    <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/diego-armando-maradona-logro-dos-goles-ante-inglaterra--uno-de-ellos-el-de-la-conocida--mano-de-dios---archivo.jpg">
-  </div>
-</section>
-
-<footer>© 2026 HugoVenezia</footer>
-
-</body>
-</html>
+    <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/diego-armando-m
