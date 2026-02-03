@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>2026 World Cup | Road to Champions</title>
+<title>HugoVenezia | Football Stories</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
 }
 
 body{
-  background:#f4f6f8;
-  color:#333;
+  background:#f1f5f3;
+  color:#222;
 }
 
 /* HEADER */
@@ -26,30 +26,48 @@ header{
   top:0;
   width:100%;
   height:70px;
-  background:#111;
+  background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
   color:white;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:0 20px;
+  padding:0 30px;
   z-index:9999;
 }
 
 .logo{
-  font-weight:600;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:1px;
 }
 
-/* NAV – 🔴 FLEX ŞART */
+/* NAV */
 nav{
   display:flex;
   align-items:center;
-  gap:20px;            /* margin-left yerine */
+  gap:25px;
 }
 
 nav a{
   color:white;
   text-decoration:none;
-  white-space:nowrap;
+  font-size:14px;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:#d4af37;
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
 }
 
 /* DROPDOWN */
@@ -60,21 +78,20 @@ nav a{
 .dropdown-content{
   display:none;
   position:absolute;
-  top:100%;
+  top:120%;
   left:0;
-  background:#1c1c1c;
-  min-width:340px;
-  border-radius:6px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.45);
-  z-index:10000;
+  background:#111;
+  min-width:320px;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,.5);
 }
 
 .dropdown-content a{
   display:block;
-  padding:10px 14px;
+  padding:12px 16px;
   font-size:13px;
   color:#eee;
-  text-decoration:none;
 }
 
 .dropdown-content a:hover{
@@ -82,7 +99,6 @@ nav a{
   color:#111;
 }
 
-/* 🔴 HOVER GERÇEKTEN ÇALIŞIR */
 .dropdown:hover .dropdown-content{
   display:block;
 }
@@ -92,7 +108,6 @@ nav a{
   height:100vh;
   position:relative;
   overflow:hidden;
-  pointer-events:none;
 }
 
 .hero video{
@@ -107,7 +122,7 @@ nav a{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.55);
+  background:linear-gradient(to bottom,rgba(0,0,0,.65),rgba(0,0,0,.4));
 }
 
 .hero-content{
@@ -117,49 +132,72 @@ nav a{
   transform:translate(-50%,-50%);
   color:white;
   text-align:center;
-  pointer-events:auto;
 }
 
 .hero-content h1{
-  font-size:48px;
+  font-size:54px;
+  font-weight:700;
+  letter-spacing:1px;
 }
 
 .hero-content p{
-  margin-top:10px;
+  margin-top:15px;
+  font-size:16px;
+  opacity:.9;
 }
 
 .hero-content button{
-  margin-top:25px;
-  padding:14px 28px;
+  margin-top:35px;
+  padding:15px 34px;
   background:#d4af37;
   border:none;
   font-weight:600;
+  border-radius:30px;
   cursor:pointer;
+  transition:.3s;
+}
+
+.hero-content button:hover{
+  background:#b8962e;
+  transform:translateY(-3px);
 }
 
 /* SECTIONS */
 section{
-  padding:100px 40px;
+  padding:110px 50px;
   text-align:center;
 }
 
+section h2{
+  font-size:32px;
+  margin-bottom:40px;
+}
+
+/* GALLERY */
 .gallery-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
 
 .gallery-grid img{
   width:100%;
-  border-radius:10px;
+  border-radius:15px;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
+  transition:.4s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.05);
 }
 
 /* FOOTER */
 footer{
   background:#111;
-  color:white;
+  color:#aaa;
   text-align:center;
-  padding:20px;
+  padding:30px;
+  font-size:14px;
 }
 </style>
 </head>
@@ -176,10 +214,8 @@ footer{
       <a href="#">Oyuncu Analizi ▾</a>
       <div class="dropdown-content">
         <a href="tonali.html" target="_blank">
-  Sandro Tonali – Salernitana vs Brescia Maçı Değerlendirmesi
-</a>
-
-
+          Sandro Tonali – Salernitana vs Brescia Maçı Değerlendirmesi
+        </a>
       </div>
     </div>
   </nav>
@@ -192,7 +228,7 @@ footer{
 
   <div class="hero-content">
     <h1>HugoVenezia Blog</h1>
-    <p>Turnuva • Takım • Oyuncu</p>
+    <p>Turnuva • Takım • Oyuncu Analizleri</p>
     <button onclick="location.href='yazilar.html'">Yazıları Oku</button>
   </div>
 </section>
@@ -202,7 +238,13 @@ footer{
   <div class="gallery-grid">
     <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/GettyImages-503368718.jpg.webp">
     <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/roberto-baggio-after-missing-the-deciding-penalty-in-the-v0-qsfv504qujyd1.webp">
-    <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/diego-armando-m
+    <img src="https://raw.githubusercontent.com/HugoVenezia/WorldCup-Video/main/diego-armando-maradona-logro-dos-goles-ante-inglaterra--uno-de-ellos-el-de-la-conocida--mano-de-dios---archivo.jpg">
+  </div>
+</section>
 
+<footer>
+  © 2026 HugoVenezia • Football Stories
+</footer>
 
-
+</body>
+</html>
